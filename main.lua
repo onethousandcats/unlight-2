@@ -14,7 +14,7 @@ local h = display.viewableContentHeight
 local dw = display.pixelWidth
 local dh = display.pixelHeight
 
-local currentInfo = system.pathForFile( "current.txt" )
+currentInfo = system.pathForFile( "current.txt" )
 
 local cur = io.open( currentInfo, "r" )
 
@@ -27,7 +27,7 @@ end
 io.close(cur)
 
 local savedLvl = tonumber(info[1])
-local lvl = 1
+lvl = 1
 local tutLvl = 1
 local theme = info[2]
 
@@ -45,7 +45,7 @@ if ( theme == "dark" ) then
 	)
 end
 
-local background = display.newRect(0, 0, dw, dh)
+background = display.newRect(0, 0, dw, dh)
 background:setFillColor(g)
 background.x = dw/2; background.y = dh/2
 background.width = dw; background.height = dh;
